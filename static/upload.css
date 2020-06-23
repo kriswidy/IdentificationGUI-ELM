@@ -1,0 +1,280 @@
+
+.file-upload {
+    background-color: rgba(21, 131, 233, 0.1);
+    width: 600px;
+    /* min-height: 500px; */
+    max-height:auto;
+    margin: 0 auto;
+    padding: 20px;
+    /* #0a7feb */
+}
+
+.box1 {
+    background-color: rgba(21, 131, 233, 0.1);
+    width: 60%;
+    height:300px;
+    margin: 0 auto;
+    padding: 20px;
+    /* #0a7feb */
+}
+
+.box2 {
+    background-color: rgba(21, 131, 233, 0.1);
+    width: 80%;
+    height:300px;
+    margin: 0 auto;
+    padding: 20px;
+    /* #0a7feb */
+}
+
+.box3 {
+    background-color: rgba(21, 131, 233, 0.1);
+    width: 100%;
+    height:auto;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    /* overflow-x: scroll; */
+    /* #0a7feb */
+}
+
+pre{
+    overflow-x: auto;
+    font-size: 1em;
+    z-index: -1;
+    padding-bottom: 30px;
+}
+.imgg{
+    min-width: 300px;
+    max-width: 500px;
+    height: auto;
+}
+
+.imgg2{
+    /* min-width: 300px; */
+    max-width: 250px;
+    height: auto;
+}
+
+.file-upload-btn {
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: #1583e9;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #15824B;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.file-upload-btn:hover {
+    background: #1AA059;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.file-upload-btn:active {
+    border: 0;
+    transition: all .2s ease;
+}
+
+.file-upload-content {
+    display: none;
+    text-align: center;
+}
+
+.file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.image-upload-wrap {
+margin-top: 20px;
+border: 4px dashed #1583e9;
+position: relative;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    
+    background-color: #e7f2fd;
+    border: 4px dashed #ffffff;
+}
+
+.image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+}
+
+.drag-text {
+    text-align: center;
+}
+
+.drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #393e46;
+    padding: 60px 0;
+}
+
+.drag-text:hover h3:hover {
+    color: #ffffff;
+}
+
+.file-upload-image {
+    max-height: 500px;
+    max-width: auto;
+    margin: auto;
+    padding: 20px;
+}
+
+.remove-image {
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: #cd4535;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #b02818;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.remove-image:hover {
+    background: #c13b2a;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.remove-image:active {
+    border: 0;
+    transition: all .2s ease;
+}
+
+.btn-remove{
+    transition: all .2s ease;
+    width:100%;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: #cd4535;
+    border: none;
+    border-radius: 50px;
+    color: #ffffff;
+}
+
+.img-proc{
+    max-width:500px;
+    max-height:auto;
+    /* background-color:#0a7feb; */
+    /* background-color: rgba(10, 127, 235, 0.9); */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  } */
+
+.clip{
+    font-size: 14pt;
+    color: #525252;
+}
+
+.kembali{
+    float:right; 
+}
+.kembali:hover, 
+.kembali:active{
+    color:#1583e9!important;
+}
+
+.btn-copy{
+    /* position: absolute;; */
+    
+    position: relative; display: inline; float: right;
+    background-color: #1583e9;
+    border: 2px solid #1583e9;
+    /* border-radius: 8px; */
+}
+
+
+
+/* ====================================================== */
+.ta{
+    border: none!important;
+    resize: none;
+    /* width: 100%; */
+    outline: none!important;
+    background-color: rgba(21, 131, 233, 0.1);
+}
+.input-group {
+    margin-top: 30px;
+    position: relative;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group-addon {
+    border: none
+}
+
+.linkname {
+    display: none;
+}
+
+#copyButton {
+    cursor: pointer; 
+    background: #f1bb3a;
+}
+#copyTarget {
+    border-left: none;
+}
+
+.copied {
+    opacity: 1; 
+    z-index:-1;
+    position: absolute; 
+    left: 55px;}
+
+
+@media (min-width: 768px) {
+    .copied {left: 135px}
+
+    .linkname {
+        display: block;
+        background: #3B3E45; 
+        color: #fff
+    }
+  }
+  
+  
