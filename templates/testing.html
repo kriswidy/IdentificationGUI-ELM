@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="uza - Model Agency HTML5 Template">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Smart Identification</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/img/core-img/brain.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/upload.css">
+    
+</head>
+
+<body>
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area">
+        <!-- Main Header Start -->
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="uzaNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="/"><img style="width:65px;height:auto" src="../static/img/core-img/brain.png" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- Menu Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul id="nav">
+                                <li class="current-item"><a href="/">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/testing">Testing</a></li>
+                            </ul>
+
+                            <!-- Get A Quote -->
+                            <!-- <div class="get-a-quote ml-4 mr-3">
+                                <a href="/testing" class="btn uza-btn">Generate</a>
+                            </div> -->
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Breadcrumb Area Start ***** -->
+    <div class="breadcrumb-area">
+        <div class="container h-100">
+            <div class="row h-100 align-items-end">
+                <div class="col-12">
+                    <div class="breadcumb--con">
+                        <h2 class="title">Testing</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Testing</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Curve -->
+        <div class="breadcrumb-bg-curve">
+            <img src="../static/img/core-img/curve-5.png" alt="">
+        </div>
+    </div>
+    <!-- ***** Breadcrumb Area End ***** -->
+
+   <!-- ***** About Us Area Start ***** -->
+   <section class="uza-about-us-area section-padding-10">
+        <div class="container">
+            <!-- tulisan judul -->
+            <!-- <div class="row align-items-center">
+                
+                <div class="col-12 col-lg-6">
+                    <h2 style="text-align:center;margin-bottom:10px;">Image Original</h2>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h2 style="text-align:center;margin-bottom:10px;">Prediction</h2>
+                </div>
+            </div> -->
+            <!-- tulisan judul end -->
+            
+            <!-- form upload -->
+            <!-- <form action="/upload" method="post" enctype="multipart/form-data" >
+                <label class="btn btn-default btn-file">
+                    Browse <input type="file" name="image" style="display: none;">
+                </label>
+                <input type="submit" value="Upload your image" class="btn btn-primary">
+            </form>
+            <form action="/predict" method="post" enctype="multipart/form-data" >
+                <input type="button" class="btn btn-success" value="Predict">
+            </form> -->
+            <!-- form upload end -->
+
+            <!-- konten -->
+            <div class="row align-items-center">
+                <!-- About Thumbnail -->
+                <div class="col-12 col-lg-12">
+                    <center>
+                        <h2 style="text-align:center;margin-bottom:10px;">Image Original</h2>
+                    </center>
+                    <form action="/upload" method="post" enctype="multipart/form-data" >
+                        <div class="file-upload">
+                            <!-- <button class="btn uza-btn btn-3" style="width:100%;" type="button" onclick="$('.file-upload-input').trigger( 'click' )"><i class="fa fa-plus"></i> &nbsp;Add Image</button> -->
+                            <div class="image-upload-wrap">
+                                <input class="file-upload-input" type='file' name="file" onchange="readURL(this);" accept="image/*" />
+                                <div class="drag-text">
+                                <h3>Drag and drop a file or select add Image</h3>
+                                </div>
+                            </div>
+                            <div class="file-upload-content">
+                                <img class="file-upload-image imgg" src="#"  alt="your image" />
+                                <div class="image-title-wrap">
+                                    <button type="button" onclick="removeUpload()" class="btn btn-remove" >Remove <span class="image-title">Uploaded Image</span></button>
+                                </div>
+                                <div class="image-title-wrap">
+                                    <input type="submit" value="Upload your image" class="btn uza-btn btn-3 btn-block">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <!-- konten end -->
+
+
+
+        </div>
+
+        <!-- About Background Pattern -->
+        <div class="about-bg-pattern">
+            <img src="../static/img/core-img/curve-2.png" alt="">
+        </div>
+    </section>
+    <!-- ***** About Us Area End ***** -->
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-80-0">
+        <div class="container">
+
+            <div class="row" style="margin-bottom: 30px;">
+
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script> All rights reserved | Kris Widyo Febyanti | TI-4C | 1641720006 | Politeknik Negeri Malang
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+
+</body>
+    <!-- ******* All JS Files ******* -->
+    <!-- jQuery js -->
+    <script src="../static/js/jquery.min.js"></script>
+    <!-- Popper js -->
+    <script src="../static/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- All js -->
+    <script src="../static/js/uza.bundle.js"></script>
+    <!-- Active js -->
+    <script src="../static/js/default-assets/active.js"></script>
+
+
+<script>
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+    
+        var reader = new FileReader();
+    
+        reader.onload = function(e) {
+          $('.image-upload-wrap').hide();
+    
+          $('.file-upload-image').attr('src', e.target.result);
+          $('.file-upload-content').show();
+    
+          $('.image-title').html(input.files[0].name);
+        };
+    
+        reader.readAsDataURL(input.files[0]);
+    
+      } else {
+        removeUpload();
+      }
+    }
+    
+    function removeUpload() 
+        {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function () {
+                $('.image-upload-wrap').addClass('image-dropping');
+            });
+            $('.image-upload-wrap').bind('dragleave', function () {
+                $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    
+    </script>
+</html>

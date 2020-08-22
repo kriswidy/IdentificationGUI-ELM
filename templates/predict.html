@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="uza - Model Agency HTML5 Template">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Smart Identification</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/img/core-img/brain.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/upload.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <!-- <script src="../node_modules/clipboard/dist/clipboard.min.js"></script> -->
+
+</head>
+
+<body>
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area">
+        <!-- Main Header Start -->
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="uzaNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="/"><img style="width:65px;height:auto" src="../static/img/core-img/brain.png" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- Menu Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul id="nav">
+                                <li class="current-item"><a href="/">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/testing">Testing</a></li>
+                            </ul>
+
+                            <!-- Get A Quote -->
+                            <!-- <div class="get-a-quote ml-4 mr-3">
+                                <a href="/testing" class="btn uza-btn">Generate</a>
+                            </div> -->
+                        </div>
+                        <!-- Nav End -->
+                        <!-- Nav End -->
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Breadcrumb Area Start ***** -->
+    <div class="breadcrumb-area">
+        <div class="container h-100">
+            <div class="row h-100 align-items-end">
+                <div class="col-12">
+                    <div class="breadcumb--con">
+                        <h2 class="title">Predict</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Testing</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Curve -->
+        <div class="breadcrumb-bg-curve">
+            <img src="../static/img/core-img/curve-5.png" alt="">
+        </div>
+    </div>
+    <!-- ***** Breadcrumb Area End ***** -->
+
+   <!-- ***** About Us Area Start ***** -->
+   <section class="uza-about-us-area">
+       <!-- <div class="container"> -->
+            <div class="row align-items-center">
+        
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                    <h2 style="text-align:center;margin-bottom:10px;">Image Original</h2>
+                    <form action="/upload" method="post" enctype="multipart/form-data" >
+                        <div class="box1">
+                            <center>
+                                <img style="width:150px;height: auto;" src=" {{url_for('send_image', filename=image_name)}}"><br><br>
+                                <a href="/testing" style="width:250px!important;" class="btn uza-btn btn-3">Kembali</a>
+                            </center>
+                            
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+                    <h2 style="text-align:center;margin-bottom:10px;">Prediction</h2>
+                    <div class="box2">
+                        <div class="row">
+                            
+                            <table class="table" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td width="20%"><h3>Result</h3></td>
+                                        <td width="10%"><h3>:</h3></td>
+                                        <th width="70%"><h3 id="respon">{{res}}</h3></th>
+                                        <!-- <td>{{res}}</td> -->
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div style="display:none" id="textview">
+                                <devsite-code id="bar" dark-code="">
+    <pre translate="no" is-upgraded=""><code>&lt;TextView
+        android:id="@+id/simpleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AbhiAndroid" /&gt;</code></pre>
+                                    <div class="devsite-code-buttons-container">
+                                            <button  style="float:right;"class="btn btn-secondary" data-toggle="tooltip" data-placement="top" data-clipboard-target="#bar" title="copy to clipboard!"><i class="fa fa-copy"></i>&nbsp;Copy</button>
+                                            
+                                    </div>
+                                </devsite-code> 
+                            </div>
+                            <div style="display:none" id="imagebutton">
+                                <devsite-code id="bar" dark-code="">
+    <pre translate="no" is-upgraded=""><code>&lt;TextView
+        android:id="@+id/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AbhiAndroid" /&gt;</code></pre>
+                                    <div class="devsite-code-buttons-container">
+                                            <button  style="float:right;"class="btn btn-secondary" data-toggle="tooltip" data-placement="top" data-clipboard-target="#bar" title="copy to clipboard!"><i class="fa fa-copy"></i>&nbsp;Copy</button>
+                                            
+                                    </div>
+                                </devsite-code> 
+                            </div>
+                            <div style="display:none" id="switchbutton">
+                                <devsite-code id="bar" dark-code="">
+    <pre translate="no" is-upgraded=""><code>&lt;TextView
+        android:id="@+id/SWITCH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AbhiAndroid" /&gt;</code></pre>
+                                    <div class="devsite-code-buttons-container">
+                                            <button  style="float:right;"class="btn btn-secondary" data-toggle="tooltip" data-placement="top" data-clipboard-target="#bar" title="copy to clipboard!"><i class="fa fa-copy"></i>&nbsp;Copy</button>
+                                            
+                                    </div>
+                                </devsite-code> 
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+            </div>
+       <!-- </div> -->
+
+            <br><br>
+
+        <!-- About Background Pattern -->
+        <div class="about-bg-pattern">
+            <img src="../static/img/core-img/curve-2.png" alt="">
+        </div>
+    </section>
+    <!-- ***** About Us Area End ***** -->
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-80-0">
+        <div class="container">
+
+            <div class="row" style="margin-bottom: 30px;">
+
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script> All rights reserved | Kris Widyo Febyanti | TI-4C | 1641720006 | Politeknik Negeri Malang
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+</body>
+    <!-- ******* All JS Files ******* -->
+    <!-- jQuery js -->
+    <script src="../static/js/jquery.min.js"></script>
+    <!-- Popper js -->
+    <script src="../static/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- All js -->
+    <script src="../static/js/uza.bundle.js"></script>
+    <!-- Active js -->
+    <script src="../static/js/default-assets/active.js"></script>
+
+   
+<script>
+$( document ).ready(function() {
+    var res = $("#respon").text();
+    if(res==="ImageButton"){
+        $("#imagebutton").css("display","block");
+    }
+    else if(res==="TextView"){
+        $("#textview").css("display","block");
+    }
+    else if(res==="SwitchButton"){
+        $("#switchbutton").css("display","block");
+    }
+
+});
+
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+    
+        var reader = new FileReader();
+    
+        reader.onload = function(e) {
+          $('.image-upload-wrap').hide();
+    
+          $('.file-upload-image').attr('src', e.target.result);
+          $('.file-upload-content').show();
+    
+          $('.image-title').html(input.files[0].name);
+        };
+    
+        reader.readAsDataURL(input.files[0]);
+    
+      } else {
+        removeUpload();
+      }
+    }
+    
+    function removeUpload() 
+        {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function () {
+                $('.image-upload-wrap').addClass('image-dropping');
+            });
+            $('.image-upload-wrap').bind('dragleave', function () {
+                $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    
+    </script>
+    <script>
+            var btns = document.querySelectorAll('button');
+            var clipboard = new ClipboardJS(btns);
+            clipboard.on('success', function(e) {
+                console.log(e);
+            });
+            clipboard.on('error', function(e) {
+                console.log(e);
+            });
+    </script>
+    <script>
+            var btn = document.getElementById('btn');
+            var clipboard = new ClipboardJS(btn);
+            clipboard.on('success', function(e) {
+                console.log(e);
+            });
+            clipboard.on('error', function(e) {
+                console.log(e);
+            });
+    </script>
+</html>

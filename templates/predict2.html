@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="uza - Model Agency HTML5 Template">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Smart Identification</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/img/core-img/brain.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/upload.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <!-- <script src="../node_modules/clipboard/dist/clipboard.min.js"></script> -->
+
+</head>
+
+<body>
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area">
+        <!-- Main Header Start -->
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="uzaNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="/"><img style="width:65px;height:auto" src="../static/img/core-img/brain.png" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- Menu Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul id="nav">
+                                <li class="current-item"><a href="/">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/testing">Testing</a></li>
+                            </ul>
+
+                            <!-- Get A Quote -->
+                            <!-- <div class="get-a-quote ml-4 mr-3">
+                                <a href="/testing" class="btn uza-btn">Generate</a>
+                            </div> -->
+                        </div>
+                        <!-- Nav End -->
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Breadcrumb Area Start ***** -->
+    <div class="breadcrumb-area">
+        <div class="container h-100">
+            <div class="row h-100 align-items-end">
+                <div class="col-12">
+                    <div class="breadcumb--con">
+                        <h2 class="title">Predict</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Testing</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Curve -->
+        <div class="breadcrumb-bg-curve">
+            <img src="../static/img/core-img/curve-5.png" alt="">
+        </div>
+    </div>
+    <!-- ***** Breadcrumb Area End ***** -->
+
+    <!-- ***** Blog Area Start ***** -->
+    <section class="uza-blog-area section-padding-50">
+        <div class="container" >
+            <div class="row">
+                <!-- KIRI -->
+                <div class="col-12 col-lg-4">
+                    <div class="single-blog-post bg-img mb-80" style="background-image: url(./img/bg-img/8.jpg);">
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <span class="post-date text-center"><span>Image Original</span></span>
+                            <center>
+                                <img class="imgg2" src=" {{url_for('send_image', filename=image_name)}}"><br><br>
+                                <!-- <a href="/testing" style="width:250px!important;" class="btn uza-btn btn-3">Kembali</a> -->
+                            </center>
+
+                            <!-- <a href="#" class="post-title">SEO: The Movie By Ignite Visibility</a>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing esed diam nonumy eirmod tempor invidunt ut</p>
+                            <a href="#" class="read-more-btn">Read More <i class="arrow_carrot-2right"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KANAN -->
+                <div class="col-12 col-lg-8 col-sm-12">
+                    <div class="single-blog-post bg-img mb-80" style="background-image: url(./img/bg-img/9.jpg);">
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <span class="post-date text-center"><span>Prediction</span></span>
+                            <div class="row">
+                                <div class="col-12 col-lg-3 col-sm-6 post-title" >Result</div>
+                                <div class="col-12 col-lg-9 col-sm-6 post-title" style="color:#1583e9;" id="respon">:&nbsp;<b>{{res}}</b></div>
+                            </div>
+                            
+                            <!-- <div>
+                                <button class="btn btn-default btn-copy" id="copy" data-clipboard-target="#bar"><i class="fa fa-copy" style="color:#1583e9;"></i></button>   
+                            </div> -->
+
+                            <!--start-->
+                            <!-- <div class="box3">
+                                <div style ="display:none" id="textview">
+                                    <div id="bar">
+                                        <div>
+                                            <button class="btn btn-default btn-copy" id="copy" data-clipboard-target="#bar"><i class="fa fa-copy" style="color:white;font-size: 15pt"></i></button>   
+                                        </div>
+<pre><code>&lt;TextView
+    android:id="@+id/simpleTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="AbhiAndroid"
+    android:layout_centerInParent="true"
+    android:textSize="40sp" 
+    android:padding="10dp"
+    android:textColor="#fff"
+    android:background="#000" &lt;!--red color for background of text view--&gt;
+    android:textStyle="bold|italic"/&gt;&lt;!--bold and italic text style of text--&gt;</code></pre>
+                                    </div>
+                                </div>
+
+                                 <div style ="display:none" id="imagebutton">
+                                    <div id="bar">
+                                        <div>
+                                            <button class="btn btn-default btn-copy" id="copy" data-clipboard-target="#bar"><i class="fa fa-copy" style="color:white;font-size: 15pt"></i></button>   
+                                        </div>
+<pre><code>&lt;ImageButton
+    android:id="@+id/simpleImageButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#000"
+    android:src="@drawable/home"
+    android:padding="30dp"/&gt;&lt;!-- set 30dp padding from all the sides of the view--&gt;</code></pre>
+                                    
+                                    </div>
+                                </div>
+
+                                 <div style ="display:none" id="switchbutton">
+                                    <div id="bar">
+                                        <div>
+                                            <button class="btn btn-default btn-copy" id="copy3" data-clipboard-target="#bar"><i class="fa fa-copy" style="color:white;font-size: 15pt"></i></button>   
+                                        </div>
+<pre><code>&lt;Switch
+    android:id="@+id/simpleSwitch"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Sound"
+    android:checked="true"
+    android:gravity="left"/&gt;&lt;!--gravity of the Switch--&gt;</code></pre>
+                                    
+                                    </div>
+                                </div>
+                            </div>  -->
+                            <!--end box 3-->
+                            
+                            <div class="box3">
+                                    <div class="container"> 
+                                        <!-- tv -->
+                                        <div class="input-group" id="textview">
+                                            <textarea rows="13" cols="30" id="copyTarget1" class="copyTarget form-control ta" readonly>
+                                                {{code}}
+                                            </textarea>
+                                            <span id="copyButton1" class="copyButton input-group-addon btn" title="Click to copy">
+                                                <i class="fa fa-clipboard clip" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="copied">Copied !</span>
+                                        </div>
+                                        <br>
+                                        <!-- imgbtn -->
+                                        <!-- <div class="input-group" id="imagebutton">
+                                            <textarea rows="8"  id="copyTarget2" class="copyTarget form-control ta" readonly>
+&lt;ImageButton
+        android:id="@+id/simpleImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:src="@drawable/home"
+        android:padding="30dp"/&gt;
+        &lt;!-- set 30dp padding from all the sides of the view--&gt;
+                                            </textarea>
+                                            <span id="copyButton2" class="copyButton input-group-addon btn" title="Click to copy">
+                                            <i class="fa fa-clipboard clip" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="copied">Copied !</span>
+                                        </div> -->
+                                        <!-- switch -->
+                                        <!-- <div class="input-group" style ="display:none" id="switchbutton">
+                                            <textarea rows="8"  id="copyTarget3" class="copyTarget form-control ta" readonly>
+&lt;Switch
+        android:id="@+id/simpleSwitch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Sound"
+        android:checked="true"
+        android:gravity="left"/&gt;
+        &lt;!--gravity of the Switch--&gt;
+                                            </textarea>
+                                            <span id="copyButton3" class="copyButton  input-group-addon btn" title="Click to copy">
+                                                <i class="fa fa-clipboard clip" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="copied">Copied !</span>
+                                        </div> -->
+                                    </div>
+                            </div>
+
+                            <br>
+                            <a href="/testing" class="read-more-btn kembali"><i class="arrow_carrot-2left"></i>Kembali</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- ***** Blog Area End ***** -->
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-80-0">
+        <div class="container">
+
+            <div class="row" style="margin-bottom: 30px;">
+
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script> All rights reserved | Kris Widyo Febyanti | TI-4C | 1641720006 | Politeknik Negeri Malang
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+</body>
+    <!-- ******* All JS Files ******* -->
+    <!-- jQuery js -->
+    <script src="../static/js/jquery.min.js"></script>
+    <!-- Popper js -->
+    <script src="../static/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- All js -->
+    <script src="../static/js/uza.bundle.js"></script>
+    <!-- Active js -->
+    <script src="../static/js/default-assets/active.js"></script>
+
+    <!-- <script>
+    
+
+    // Tooltip
+
+    $('#copy').tooltip({
+      trigger: 'click',
+      placement: 'top'
+    });
+    $('#copy2').tooltip({
+      trigger: 'click',
+      placement: 'top'
+    });
+    $('#copy3').tooltip({
+      trigger: 'click',
+      placement: 'top'
+    });
+// ============================================
+    function setTooltip(message) {
+      $('#copy').tooltip('hide')
+        .attr('data-original-title', message)
+        .tooltip('show');
+    }
+    function setTooltip(message) {
+      $('#copy2').tooltip('hide')
+        .attr('data-original-title', message)
+        .tooltip('show');
+    }
+    function setTooltip(message) {
+      $('#copy3').tooltip('hide')
+        .attr('data-original-title', message)
+        .tooltip('show');
+    }
+// ==============================================
+    function hideTooltip() {
+      setTimeout(function() {
+        $('#copy').tooltip('hide');
+      }, 1000);
+    }
+    function hideTooltip() {
+      setTimeout(function() {
+        $('#copy2').tooltip('hide');
+      }, 1000);
+    }
+    function hideTooltip() {
+      setTimeout(function() {
+        $('#copy3').tooltip('hide');
+      }, 1000);
+    }
+    
+    // Clipboard
+    var clipboard = new ClipboardJS('#copy');
+    var clipboard2 = new ClipboardJS('#copy2');
+    var clipboard3 = new ClipboardJS('#copy3');
+    
+    clipboard.on('success', function(e) {
+         setTooltip('Copied!');
+         hideTooltip();
+     
+    });
+    clipboard2.on('success', function(e) {
+         setTooltip('Copied!');
+         hideTooltip();
+     
+    });
+    clipboard3.on('success', function(e) {
+         setTooltip('Copied!');
+         hideTooltip();
+     
+    });
+// =============================================
+    clipboard.on('error', function(e) {
+        setTooltip('Failed!');
+        hideTooltip();
+      
+    });
+    clipboard2.on('error', function(e) {
+        setTooltip('Failed!');
+        hideTooltip();
+      
+    });
+    clipboard3.on('error', function(e) {
+        setTooltip('Failed!');
+        hideTooltip();
+      
+    });
+     
+    </script> -->
+    
+    <!-- // var clipboard = new ClipboardJS('button');
+    
+    // clipboard.on('success', function(e) {
+    //   setTooltip('Copied!');
+    //   hideTooltip();
+    // });
+    
+    // clipboard.on('error', function(e) {
+    //   setTooltip('Failed!');
+    //   hideTooltip();
+    // }); -->
+
+
+    <!-- <script>
+            var btns = document.querySelectorAll('button');
+            var clipboard = new ClipboardJS(btns);
+            clipboard.on('success', function(e) {
+                console.log(e);
+            });
+            clipboard.on('error', function(e) {
+                console.log(e);
+            });
+    </script>
+    <script>
+            var btn = document.getElementById('btn');
+            var clipboard = new ClipboardJS(btn);
+            clipboard.on('success', function(e) {
+                console.log(e);
+            });
+            clipboard.on('error', function(e) {
+                console.log(e);
+            });
+    </script> -->
+
+
+<!-- <script>
+$( document ).ready(function() {
+    console.log($("#respon").text());
+    var res = $("#respon").text();
+    if(res===": ImageButton"){
+        $("#imagebutton").css("display","block");
+    }
+    else if(res===": TextView"){
+        $("#textview").css("display","block");
+    }
+    else if(res===": SwitchButton"){
+        $("#switchbutton").css("display","block");
+    }
+
+});
+</script> -->
+
+<!-- script copy to clipboard -->
+<script>
+    (function () {
+        "use strict";
+        function copyToClipboard(elem) {
+            var target = elem;
+            // select the content
+            var currentFocus = document.activeElement;
+            target.focus();
+            target.setSelectionRange(0, target.value.length);
+            // copy the selection
+            var succeed;
+            try {
+                succeed = document.execCommand("copy");
+            } catch (e) {
+                console.warn(e);
+                succeed = false;
+            }
+            // Restore original focus
+            if (currentFocus && typeof currentFocus.focus === "function") {
+                currentFocus.focus();
+            }
+            if (succeed) {
+                $(target).closest('.input-group').find('.copied').animate({top: -25, opacity: 0}, 700, function () {
+                    $(this).css({top: 0, opacity: 1});
+                });
+            }
+            return succeed;
+        }
+        $(".copyButton").on("click", function () {
+            var parent = $(this).closest('.input-group');
+            copyToClipboard(parent.find(".copyTarget")[0]);
+        });
+    }());
+</script>
+    
+</html>
