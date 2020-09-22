@@ -1,0 +1,64 @@
+#membuat data training 
+
+p = 8
+l = 8
+
+def create_train_data_new():
+  training_data = []
+  label = []
+  
+  for cls in classes:
+    for img in tqdm(os.listdir(train_path+cls)):
+      label_temp = label_img(cls)
+      path = os.path.join(train_path+cls,img)
+      #grayscaling process
+      img = cv2.imread(path,cv2.IMREAD_GRAYSCALE)
+      # Find edge with Canny edge detection
+      edges = cv2.Canny(img, 100, 200)
+#       img= cv2.imread(path)
+      #resizing process
+      img = cv2.resize(img, (p,l))
+      train = numpy.array(img)
+      flat_train = train.flatten()
+      training_data.append(flat_train)
+      #labeling process
+      label.append(label_temp)  
+#       print (label_temp)
+  return training_data, label
+
+training_data, training_label = create_train_data_new()
+#==============================================
+#membuat data testing dengan image processing
+
+p = 8
+l = 8
+
+def create_test_data_new():
+  testing_data = []
+  test_label = []
+  
+  for cls in classes:
+    for img in tqdm(os.listdir(test_path+cls)):
+      label_temp = numpy.array(label_img(cls))
+      path = os.path.join(test_path+cls,img)
+      img = cv2.imread(path,cv2.IMREAD_GRAYSCALE)
+      # Find edge with Canny edge detection
+      edges = cv2.Canny(img, 100, 200)
+#     img= cv2.imread(path)
+      img = cv2.resize(img, (p,l))
+      test = numpy.array(img)
+      flat_test = test.flatten() 
+      testing_data.append(flat_test)
+      test_label.append(label_temp)  
+#       print (label_temp)
+  return testing_data, test_label
+testing_data, testing_label = create_test_data_new()
+#===============================================
+    model = ELM(
+        n_input_nodes=64,
+        n_hidden_nodes=64,
+        n_output_nodes=n_classes,
+        loss='mean_squared_error',
+        activation='sigmoid',
+        name='elm',
+    )

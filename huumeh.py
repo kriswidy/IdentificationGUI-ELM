@@ -38,10 +38,13 @@ def crop():
 def pred():
     return render_template('predict2.html')
 
-
 @app.route('/testing')
 def testing_file():
-    return render_template('testing.html')
+    return render_template('crop.html')
+
+@app.route('/slizing')
+def slizing():
+    return render_template('slizing.html')
 
 
 # ============================================================================
@@ -288,7 +291,7 @@ def upload_file():
         print ("Accept incoming file:", filename)
         print ("Save it to:", destination)
         upload.save(destination)
-
+      
     img = cv2.imread(destination,cv2.IMREAD_GRAYSCALE)
     img = cv2.resize(img, (50,50)) 
     test_img = np.array(img)
@@ -298,7 +301,7 @@ def upload_file():
 
     print(test.shape)
 
-    model = load_model('model.h5')
+    model = load_model('model_6.h5')
     result_pred = softmax(model.predict(test))
     class_pred = np.argmax(result_pred)
     prob_pred = result_pred[class_pred]

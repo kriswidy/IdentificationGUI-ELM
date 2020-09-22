@@ -209,7 +209,7 @@ class ELM(object):
         return self.__get_loss_name(self.__loss)
 
 def load_model(filepath):
-    with h5py.File(filepath, 'r') as f:
+    with h5py.File(filepath, 'r') as f:32
         alpha_init = f['weights/alpha'][...]
         beta_init = f['weights/beta'][...]
         bias_init = f['weights/bias'][...]

@@ -16,6 +16,7 @@
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="../static/upload.css">
+    <link rel="stylesheet" href="../static/js/cropper.css">
     
 </head>
 
@@ -51,6 +52,7 @@
                                 <li class="current-item"><a href="/">Home</a></li>
                                 <li><a href="/about">About</a></li>
                                 <li><a href="/testing">Testing</a></li>
+                                <li><a href="/slizing">Cropping</a></li>
                             </ul>
 
                             <!-- Get A Quote -->
@@ -72,11 +74,11 @@
             <div class="row h-100 align-items-end">
                 <div class="col-12">
                     <div class="breadcumb--con">
-                        <h2 class="title">Crop</h2>
+                        <h2 class="title">Testing</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i> Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Crop</li>
+                                <li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i> Home/Testing</a></li>
+                                <!-- <li class="breadcrumb-item active" aria-current="page">Crop</li> -->
                             </ol>
                         </nav>
                     </div>
@@ -102,10 +104,10 @@
                 <div class="col-12 col-lg-12">
                     <center>
                         <h2 style="text-align:center;margin-bottom:10px;">Image Original</h2>
-                    </center>
+                    
+                    
                     <form action="/upload" method="post" enctype="multipart/form-data" >
                         <div class="file-upload">
-                            <!-- <button class="btn uza-btn btn-3" style="width:100%;" type="button" onclick="$('.file-upload-input').trigger( 'click' )"><i class="fa fa-plus"></i> &nbsp;Add Image</button> -->
                             <div class="image-upload-wrap">
                                 <input class="file-upload-input" type='file' name="file" onchange="readURL(this);" accept="image/*" />
                                 <div class="drag-text">
@@ -124,6 +126,7 @@
                             
                         </div>
                     </form>
+                </center>
                 </div>
 
             </div>
@@ -171,8 +174,46 @@
     <!-- Active js -->
     <script src="../static/js/default-assets/active.js"></script>
 
+    <script src="../static/js/cropper.js"></script>
 
 <script>
+    var canvas  = $("#canvas"),
+    context = canvas.get(0).getContext("2d"),
+    $result = $('#result');
+
+$('#fileInput').on( 'change', function(){
+    if (this.files && this.files[0]) {
+      if ( this.files[0].type.match(/^image\//) ) {
+        var reader = new FileReader();
+        reader.onload = function(evt) {
+           var img = new Image();
+           img.onload = function() {
+             context.canvas.height = img.height;
+             context.canvas.width  = img.width;
+             context.drawImage(img, 0, 0);
+             var cropper = canvas.cropper({});
+             $('#btnCrop').click(function() {
+                // Get a string base 64 data url
+                var croppedImageDataURL = canvas.cropper('getCroppedCanvas').toDataURL("image/png"); 
+                $result.append( $('<img>').attr('src', croppedImageDataURL) );
+             });
+             $('#btnRestore').click(function() {
+               canvas.cropper('reset');
+               $result.empty();
+             });
+           };
+           img.src = evt.target.result;
+				};
+        reader.readAsDataURL(this.files[0]);
+      }
+      else {
+        alert("Invalid file type! Please select an image file.");
+      }
+    }
+    else {
+      alert('No file(s) selected.');
+    }
+});
     function readURL(input) {
       if (input.files && input.files[0]) {
     

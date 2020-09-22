@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="uza - Model Agency HTML5 Template">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Smart Identification</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/img/core-img/brain.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/upload.css">
+    <link rel="stylesheet" href="../static/js/cropper.css">
+    
+    <style>
+            .image-previewer {
+                height: 300px;
+                width: 300px;
+                display: flex;
+                border-radius: 10px;
+                border: 1px solid lightgrey;
+            }
+
+            .button {
+                font: bold 11px Arial;
+                text-decoration: none;
+                background-color: #EEEEEE;
+                color: #333333;
+                padding: 2px 6px 2px 6px;
+                border-top: 1px solid #CCCCCC;
+                border-right: 1px solid #333333;
+                border-bottom: 1px solid #333333;
+                border-left: 1px solid #CCCCCC;
+              }
+
+    </style>
+
+</head>
+
+<body>
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area">
+        <!-- Main Header Start -->
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="uzaNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="/"><img style="width:65px;height:auto" src="../static/img/core-img/brain.png" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- Menu Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul id="nav">
+                                <li class="current-item"><a href="/">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/testing">Testing</a></li>
+                                <li><a href="/slizing">Cropping</a></li>
+                            </ul>
+
+                            <!-- Get A Quote -->
+                            <!-- <div class="get-a-quote ml-4 mr-3">
+                                <a href="/testing" class="btn uza-btn">Generate</a>
+                            </div> -->
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Breadcrumb Area Start ***** -->
+    <div class="breadcrumb-area">
+        <div class="container h-100">
+            <div class="row h-100 align-items-end">
+                <div class="col-12">
+                    <div class="breadcumb--con">
+                        <h2 class="title">Crop</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Crop</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Curve -->
+        <div class="breadcrumb-bg-curve">
+            <img src="../static/img/core-img/curve-5.png" alt="">
+        </div>
+    </div>
+    <!-- ***** Breadcrumb Area End ***** -->
+
+   <!-- ***** About Us Area Start ***** -->
+   <section class="uza-about-us-area section-padding-80">
+        <div class="container">
+        
+
+            <!-- konten -->
+            <div class="row align-items-center">
+                <!-- About Thumbnail -->
+                <div class="col-12 col-lg-12">
+                    <center>
+                        <h2 style="text-align:center;margin-bottom:10px;">Upload cropped image</h2>
+
+                        <canvas id="ambilgambar" for="cropzee-input" class="image-previewer" data-cropzee="cropzee-input"></canvas>
+                        <br>
+                        <input id="cropzee-input" type="file" accept="image/*">
+                        <!-- <button onclick="cropzeeGetImage('cropzee-input')">Get Image (as blob / data-url)</button> -->
+                        <a id="download" download="image.png"><button type="button" onClick="download()">Save</button></a>
+
+                    </center>
+                </div>
+
+            </div>
+            <!-- konten end -->
+
+
+
+        </div>
+
+        <!-- About Background Pattern -->
+        <div class="about-bg-pattern">
+            <img src="../static/img/core-img/curve-2.png" alt="">
+        </div>
+    </section>
+    <!-- ***** About Us Area End ***** -->
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-80-0">
+        <div class="container">
+
+            <div class="row" style="margin-bottom: 30px;">
+
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script> All rights reserved | Kris Widyo Febyanti | TI-4C | 1641720006 | Politeknik Negeri Malang
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+
+</body>
+    <!-- ******* All JS Files ******* -->
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- jQuery js -->
+    <script src="../static/js/jquery.min.js"></script>
+    <!-- Popper js -->
+    <script src="../static/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- All js -->
+    <script src="../static/js/uza.bundle.js"></script>
+    <!-- Active js -->
+    <script src="../static/js/default-assets/active.js"></script>
+
+    <script src="../static/js/cropper.js"></script>
+
+    <!-- bismillah -->
+    <script src="../static/cropzee.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/BossBele/cropzee@latest/dist/cropzee.js" defer></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="../static/js/cropper.js"></script> -->
+
+<script>
+$(document).ready(function(){
+			$("#cropzee-input").cropzee({startSize: [100, 100, '%'],});
+    });
+
+function download(){
+        var canvas = document.getElementById("ambilgambar");
+        var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"); //Convert image to 'octet-stream' (Just a download, really)
+        window.location.href = image;      
+        // var download = document.getElementById("download");
+        // var image = document.getElementById("#cropzee-input").toDataURL("image/png")
+        //             .replace("image/png", "image/octet-stream");
+        // download.setAttribute("href", image);
+
+    }
+// different========================================
+
+//     var canvas  = $("#canvas"),
+//     context = canvas.get(0).getContext("2d"),
+//     $result = $('#result');
+
+// $('#fileInput').on( 'change', function(){
+//     if (this.files && this.files[0]) {
+//       if ( this.files[0].type.match(/^image\//) ) {
+//         var reader = new FileReader();
+//         reader.onload = function(evt) {
+//            var img = new Image();
+//            img.onload = function() {
+//              context.canvas.height = img.height;
+//              context.canvas.width  = img.width;
+//              context.drawImage(img, 0, 0);
+//              var cropper = canvas.cropper({});
+//              $('#btnCrop').click(function() {
+//                 // Get a string base 64 data url
+//                 var croppedImageDataURL = canvas.cropper('getCroppedCanvas').toDataURL("image/png"); 
+//                 $result.append( $('<img>').attr('src', croppedImageDataURL) );
+//              });
+//              $('#btnRestore').click(function() {
+//                canvas.cropper('reset');
+//                $result.empty();
+//              });
+//            };
+//            img.src = evt.target.result;
+// 				};
+//         reader.readAsDataURL(this.files[0]);
+//       }
+//       else {
+//         alert("Invalid file type! Please select an image file.");
+//       }
+//     }
+//     else {
+//       alert('No file(s) selected.');
+//     }
+// });
+//     function readURL(input) {
+//       if (input.files && input.files[0]) {
+    
+//         var reader = new FileReader();
+    
+//         reader.onload = function(e) {
+//           $('.image-upload-wrap').hide();
+    
+//           $('.file-upload-image').attr('src', e.target.result);
+//           $('.file-upload-content').show();
+    
+//           $('.image-title').html(input.files[0].name);
+//         };
+    
+//         reader.readAsDataURL(input.files[0]);
+    
+//       } else {
+//         removeUpload();
+//       }
+//     }
+    
+//     function removeUpload() 
+//         {
+//             $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+//             $('.file-upload-content').hide();
+//             $('.image-upload-wrap').show();
+//         }
+//         $('.image-upload-wrap').bind('dragover', function () {
+//                 $('.image-upload-wrap').addClass('image-dropping');
+//             });
+//             $('.image-upload-wrap').bind('dragleave', function () {
+//                 $('.image-upload-wrap').removeClass('image-dropping');
+//         });
+    
+//     window.addEventListener('DOMContentLoaded', function () {
+//       var avatar = document.getElementById('avatar');
+//       var image = document.getElementById('image');
+//       var input = document.getElementById('input');
+//       var $progress = $('.progress');
+//       var $progressBar = $('.progress-bar');
+//       var $alert = $('.alert');
+//       var $modal = $('#modal');
+//       var cropper;
+
+//       $('[data-toggle="tooltip"]').tooltip();
+
+//       input.addEventListener('change', function (e) {
+//         var files = e.target.files;
+//         var done = function (url) {
+//           input.value = '';
+//           image.src = url;
+//           $alert.hide();
+//           $modal.modal('show');
+//         };
+//         var reader;
+//         var file;
+//         var url;
+
+//         if (files && files.length > 0) {
+//           file = files[0];
+
+//           if (URL) {
+//             done(URL.createObjectURL(file));
+//           } else if (FileReader) {
+//             reader = new FileReader();
+//             reader.onload = function (e) {
+//               done(reader.result);
+//             };
+//             reader.readAsDataURL(file);
+//           }
+//         }
+//       });
+
+//       $modal.on('shown.bs.modal', function () {
+//         cropper = new Cropper(image, {
+//           aspectRatio: 1,
+//           viewMode: 3,
+//         });
+//       }).on('hidden.bs.modal', function () {
+//         cropper.destroy();
+//         cropper = null;
+//       });
+
+//       document.getElementById('crop').addEventListener('click', function () {
+//         var initialAvatarURL;
+//         var canvas;
+
+//         $modal.modal('hide');
+
+//         if (cropper) {
+//           canvas = cropper.getCroppedCanvas({
+//             width: 160,
+//             height: 160,
+//           });
+//           initialAvatarURL = avatar.src;
+//           avatar.src = canvas.toDataURL();
+//           $progress.show();
+//           $alert.removeClass('alert-success alert-warning');
+//           canvas.toBlob(function (blob) {
+//             var formData = new FormData();
+
+//             formData.append('avatar', blob, 'avatar.jpg');
+//             $.ajax('https://jsonplaceholder.typicode.com/posts', {
+//               method: 'POST',
+//               data: formData,
+//               processData: false,
+//               contentType: false,
+
+//               xhr: function () {
+//                 var xhr = new XMLHttpRequest();
+
+//                 xhr.upload.onprogress = function (e) {
+//                   var percent = '0';
+//                   var percentage = '0%';
+
+//                   if (e.lengthComputable) {
+//                     percent = Math.round((e.loaded / e.total) * 100);
+//                     percentage = percent + '%';
+//                     $progressBar.width(percentage).attr('aria-valuenow', percent).text(percentage);
+//                   }
+//                 };
+
+//                 return xhr;
+//               },
+
+//               success: function () {
+//                 $alert.show().addClass('alert-success').text('Upload success');
+//               },
+
+//               error: function () {
+//                 avatar.src = initialAvatarURL;
+//                 $alert.show().addClass('alert-warning').text('Upload error');
+//               },
+
+//               complete: function () {
+//                 $progress.hide();
+//               },
+//             });
+//           });
+//         }
+//       });
+//     });
+
+
+    </script>
+</html>
